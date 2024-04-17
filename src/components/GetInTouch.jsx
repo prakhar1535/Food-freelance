@@ -14,88 +14,77 @@ const GetInTouch = () => {
     <FaReddit />,
   ];
   return (
-    <div className=" h-[80vh]   py-11  " style={{ backgroundColor: "#38363b" }}>
-      <div className="text-center   px-48   m-auto flex justify-center flex-col gap-3">
-        <h2 className="text-4xl text-white">Our Gallary</h2>
-        <div className="w-8 h-1 bg-yellow-300 m-auto  rounded-md"></div>
-        <p
-          style={{ lineHeight: "20px" }}
-          className="text-center text-sm text-gray-300"
-        >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </p>
-      </div>
-      {/* <div className="grid grid-cols-3"> */}
-      <div
-        className=" px-72 border border-red-500 grid grid-cols-3"
-        style={{ placeItems: "center" ,justifyContent:'center',alignItems:'center' }}
-      >
-        <div className="border border-blue-600">
-          <div>
-            <h3 className="text-white">Contact Info</h3>
-            <p className="text-slate-300">
-              732/21 Second Street, Manchester, King Street, Kingston United
-            </p>
-            <span className="text-yellow-600">+ 123 4567-32-21</span>
-            <span className="text-yellow-600">+ 123 9876-54-43</span>
-            <p className="text-slate-300">info@mail.com</p>
-          </div>
-          <ul className="flex gap-4">
-            {contactIcons.map((icon) => (
-              <div className="text-white hover:cursor-pointer">{icon}</div>
-            ))}
-          </ul>
-        </div>
-        <div className="border border-blue-600">
-          <div>
-            <h3 className="text-white">Contact Info</h3>
-            <p className="text-slate-300">
-              732/21 Second Street, Manchester, King Street, Kingston United
-            </p>
-            <div>
-              <div className="text-sm text-yellow-500">
-                Monday <span className="mx-1">—</span> Thursday
-              </div>
-              <div className="text-sm text-white">
-                8 am <span className="mx-1 text-white">—</span> 11 pm
-              </div>
-            </div>
-            <div>
-              <div className="text-sm text-yellow-500">
-                Friday <span className="mx-1">—</span> Sunday
-              </div>
-              <div className="text-sm text-white">
-                11 am <span className="mx-1 text-white">—</span> 11 pm
-              </div>
-            </div>
-            <p className="text-slate-300">info@mail.com</p>
+    <>
+      <div className="w-full py-[5%] px-[15%] flex-col gap align-center justify-center relative backdrop-opacity-50 bg-black">
+        <img
+          src="/get-in-touch-bg.jpg"
+          className="absolute -z-40 top-0 left-0 w-full h-full object-cover opacity-40"
+          alt=""
+        />
+        <div className="flex flex-col items-center mb-[70px]">
+          <h1 className="text-4xl text-white pb-5">Get in touch</h1>
+          <div className="p-[0.5px] w-[30px] h-1 bg-yellow-500 mb-5"></div>
+          <div className="text-[15px] text-white">
+            Sed arcu. Cras consequat.
           </div>
         </div>
-        <div className="border border-blue-600 w-full">
-          <div className="border border-red-500 flex flex-col gap-3">
-            <h3 className="text-white text-center text-xl" >Say Hello!</h3>
-
+        <div className="flex justify-between ">
+          <div className="flex flex-col gap-6 items-center max-w-60">
+            <h2 className="text-[30px] text-center text-white">Contact Us</h2>
+            <div className="text-[15px] text-white w-[100%] text-center">
+              732/21 Second Street, Manchester, King Street, Kingston United
+            </div>
+            <div className="flex flex-col gap-2 items-center">
+              <div className="text-[15px] text-yellow-500">
+                + 123 4567-32-21
+              </div>
+              <div className="text-[15px] text-yellow-500">
+                + 123 9876-54-43
+              </div>
+            </div>
+            <div className="text-[15px] text-white">info@mail.com</div>
+            <div className="flex gap-[10px]">{contactIcons}</div>
+          </div>
+          <div className="flex flex-col gap-6 items-center">
+            <h2 className="text-[30px] text-center text-white">Open hours</h2>
+            <div className="flex flex-col gap-2 items-center">
+              <div className="text-[15px] text-yellow-500">
+                Monday - Thursday
+              </div>
+              <div className="text-[15px] text-white">8am - 11pm</div>
+            </div>
+            <div className="flex flex-col gap-2 items-center">
+              <div className="text-[15px] text-yellow-500">Friday - Sunday</div>
+              <div className="text-[15px] text-white">11am - 11pm</div>
+            </div>
+            <div className="text-[15px] text-white">
+              Note: Restraunt is closed on holidays
+            </div>
+          </div>
+          <div className="flex flex-col gap-6 w-[20%] items-center mr-12">
+            <h2 className="text-[30px] text-center text-white">Say Hello!</h2>
             <input
               type="text"
-              placeholder="Name*"
-              className="pl-4 text-sm p-2 w-full"
-              name=""
-              id=""
+              className="px-[20px] py-[11px] text-[12px] w-[100%]"
+              placeholder="Name"
             />
-             <input
+            <input
               type="text"
-              placeholder="Email*"
-              className="pl-4 text-sm p-2 w-full"
-              name=""
-              id=""
+              className="px-[20px] py-[11px] text-[12px] w-[100%]"
+              placeholder="Email"
             />
-            <textarea name="Message" placeholder="Message*" className="max-w-full max-h-80"></textarea>
-            <button className="bg-transparent border border-slate-500 w-40 text-slate-400 hover:bg-yellow-400 px-6">Send Message</button>
+            <textarea
+              type="text"
+              className="px-[20px] py-[11px] text-[12px] w-[100%] h-[80px]"
+              placeholder="*Message*"
+            />
+            <button className="border border-white bg-transparent px-[40px] py-[10px] text-[12px] rounded-[6px] hover:bg-yellow-500 hover:text-white transition-all duration-400 ease-in">
+              Send Mesaage
+            </button>
           </div>
         </div>
       </div>
-      {/* </div> */}
-    </div>
+    </>
   );
 };
 
